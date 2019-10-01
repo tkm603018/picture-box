@@ -1,0 +1,51 @@
+<% content_for :head do %>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<style>
+    .body{
+        padding: 0px;
+        margin:0px;
+    }
+    
+    .h1 {
+        font-size: 30px;
+    }
+    .h2 {
+        font-size: 20px;
+    }
+</style>
+<% end %>
+
+<body>
+<h1>tweets-view</h1>
+<h2>photo-list</h2>
+<div>
+</div>
+<div class="box1" style="height: 500px;">
+        <div class="list-group" align=center>
+            <table>
+                <thead>
+                    <tr>
+                        <div style="color: #000; font-size: 30px;">
+                        <%# <%= @date + 'のイベント'%> 
+                        </div>
+                        <br>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% picture_new = @pictures%> 
+
+                    <% picture_new.first(3).each do |picture| %>
+                    <div style="display: inline-block; padding-right: 50px;"> 
+                        <%= "=== " + picture.title + " ==="%>
+                        <br>
+                        <%= ">> " + picture.description %>
+                    </div>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+</body>
