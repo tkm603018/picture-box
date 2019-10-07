@@ -1,0 +1,27 @@
+
+<header class="navbar navbar-fixed-top <!--navbar-inverse-->">
+  <div id="header_wrap" class="header_absolute">
+  <!--<a class="logo_text" href="/top/index" style="font-size: 30px;">Tkm.</a>-->
+    <a class="logo-image" href="/top/index">
+      <img style="height: 40px;" src="/assets/tkm-logo-2.png">
+    </a>
+
+    <script>
+      var startPos = 0,winScrollTop = 0;
+      $(window).on('scroll',function(){
+        winScrollTop = $(this).scrollTop();
+        if (winScrollTop >= startPos) {
+            $('.header_absolute').addClass('transform');
+        } else {
+            $('.header_absolute').removeClass('transform');
+        }
+        startPos = winScrollTop;
+      });
+    </script>
+
+  </div>
+</header>
+    <div class="top-line">
+        <h1 style="font-size: 20px;">\\\\\\\\\</h1>
+        <h2 style="font-size: 10px;">----+++++----</h2>
+    </div>

@@ -1,0 +1,10 @@
+<div class="main posts-index">
+  <div class="container">
+    <h1>ImageLists</h1>
+    <% @imageposts.each do |imagepost| %>
+      <div class="posts-index-item">
+        <%= link_to(imagepost.title, "/imageposts/#{imagepost.id}") %>
+      </div>
+    <% end %>
+  </div>
+</div>

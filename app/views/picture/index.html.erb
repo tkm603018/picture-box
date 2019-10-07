@@ -1,0 +1,10 @@
+<% provide(:title, 'All Pictures') %>
+<h1>All pictures</h1>
+
+<ul class="users">
+	<% @pictures.each do |picture| %>
+	<li>
+		<%= link_to picture.title, picture_path(picture) %>
+		<%= picture.description %>
+	</li>
+	<% end %>

@@ -1,0 +1,138 @@
+<% content_for :head do %>
+   
+    <%# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css"> %>
+    <%# <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> %>
+    <%# <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> %>
+
+<style>
+    .container {
+        /* background: #eee; */
+        width: 100%;
+    }
+    .body{
+        padding: 0px;
+        margin:0px;
+        /* background: #aac; */
+    }
+    /* .content {
+        width: 700px;
+        height: 700px;
+        padding: 50px 50px 50px 50px;
+        margin: 300px 100px 100px 100px;
+        background-color: #ccc;
+        padding-left: 200px; 
+        text-align: center;
+    } */
+
+    #main {
+        background: #fff;
+    }
+
+
+    .side-bar-menu {
+        float: left;
+        padding: 0px 0px 0px 10px;
+        margin: 0px 0px 0px 0px;
+        background: #eee;
+    }
+
+    .main-table {
+        width: 100%;
+    }
+
+    .head-frame {
+        height: 0px; 
+        vertical-align: top; 
+        text-align: left;
+    }
+
+    .side-bar-left {
+        background: #abb;
+        border: none;
+        width: 100px;
+    }
+
+    .main {
+        background: #bab;
+    }
+
+    .side-bar-right {
+        background: #bba;
+    }
+
+    .frame {
+        height: 700px;
+        vertical-align: top; 
+        text-align: left;
+    }
+
+    .h1 {
+        font-size: 30px;
+    }
+    .h2 {
+        font-size: 20px;
+    }
+</style>
+<% end %>
+
+<body>
+<br>
+
+<table cellspacing="1" class="main-table">
+
+    <tr class="head-frame" >
+
+        <td colspan="3" class="tbhd" style="border: none">
+            <p></p>
+        </td>
+
+    </tr style="border: none">
+
+    <tr class="frame" >
+        <td class="side-bar-left" >
+        <p> frame1</p><p> side-bar</p></td>
+
+        <td class="main" style="width: 300px; border: none;"><p> frame2</p><p> 
+        main
+        <div class="box1">
+            <div class="list-group">
+                <table>
+                    <thead>
+                        <tr>
+                            <div style="color: #000; font-size: 30px;">
+                            <%# <%= @date + 'のイベント'%> 
+                            </div>
+                            <br>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% picture_new = @pictures%> 
+
+                        <% picture_new.first(3).each do |picture| %>
+                        <div style="display: block; padding-top: 50px;"> 
+                            <%= "title : " + picture.title %>
+                            <br>
+                            <%= "description : " + picture.description %>
+                        </div>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+    </p></td>
+        <td class="side-bar-right" style="width: 100px; border: none;">
+            <p>frame3</p>
+        </td>
+    </tr>
+
+    <tr style="height: 50px; vertical-align: top; text-align: left;">
+        <td colspan="3" class="tbdtl1" style="border: none;">
+        <p>footer</p>
+        </td>
+    </tr>
+</table>
+
+
+
+</body>

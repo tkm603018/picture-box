@@ -1,0 +1,37 @@
+
+<div class="imageposts-main" style="text-align: center;">
+    <div class="posts-menu">
+        <table>
+        <%= form_with model: @imageposts, url:{action: :create} do |f| %>
+            <ul class="posts-menu-ul">
+                <li class="posts-menu-li">
+                a
+                </li>
+                <li class="posts-menu-li">
+                b
+                </li>
+                <li class="posts-menu-li">
+                c
+                </li>
+            </ul>
+            <ul class="posts-menu-ul">
+            <%= f.label :title, "title" %>
+            <%= f.text_field :title %>
+            </ul>
+            <ul class="posts-menu-ul">
+            <%= f.label :description, "desc"%>
+            <%= f.text_field :description %>
+            </ul>
+            <% end %>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+  $('#micropost_picture').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('Maximum file size is 5MB. Please choose a smaller file.');
+    }
+  });
+</script>
