@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <title>PictureBox</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,15 +11,21 @@
     <%= yield :head %>
   </head>
 
-  <body>
+  <body id="body-all">
     <%= render 'layouts/header' %>
+
     <div class="container">
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
-      <%= yield %>
+
+        <div id="main">
+          <%= yield %>
+        </div>
+
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
     </div>
+
   </body>
 </html>
