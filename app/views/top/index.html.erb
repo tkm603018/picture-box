@@ -6,7 +6,7 @@
     </style>
 <% end %>
 
-<body id="side-bar">
+<body >
 <div >
     <aside id="side-bar-left">
         <div id="side-bar-left-menu">
@@ -37,7 +37,7 @@
     </aside>
 </div>
 
-<div class="main"><p> frame2</p><p> 
+<div class="main"><p> frame2</p> 
     main
     <div id="main_img">
         <img src="/assets/sample.jpg">
@@ -54,7 +54,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <% picture_new = @pictures%> 
+                    <% picture_new = @pictures %> 
 
                     <% picture_new.first(3).each do |picture| %>
                     <div style="display: block; padding-top: 50px;"> 
@@ -107,7 +107,7 @@
                         <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 6</a></li>
                     </ul>
                     </menu>
-                    <ul class="overlay"></ul>
+                    <%# <ul class="overlay"></ul> %>
                 </li>
             </label>
                 <li class="global-nav__item"><a href="#" class="nav_collection">THE STORY</a>

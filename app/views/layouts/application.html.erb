@@ -3,8 +3,8 @@
   <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%# <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> 
+  <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.0.0/velocity.min.js"></script>
@@ -45,8 +45,9 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <link rel="stylesheet" type="text/css" href="assets/sp.css.scss" media="screen and (max-width:450px)">
-  <link rel="stylesheet" type="text/css" href="assets/pc.css.scss">
+  <link rel="stylesheet" type="text/css" href="assets/sp.css.scss" media="only screen and (max-width:450px)">
+  <link rel="stylesheet" type="text/css" href="assets/pc.css.scss"　media="(min-width: 1024px)">
+  
 
   </head>
 
