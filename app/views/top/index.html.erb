@@ -1,138 +1,152 @@
 <% content_for :head do %>
-   
-    <%# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css"> %>
-    <%# <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> %>
-    <%# <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> %>
-
-<style>
-    .container {
-        /* background: #eee; */
-        width: 100%;
-    }
-    .body{
-        padding: 0px;
-        margin:0px;
-        /* background: #aac; */
-    }
-    /* .content {
-        width: 700px;
-        height: 700px;
-        padding: 50px 50px 50px 50px;
-        margin: 300px 100px 100px 100px;
-        background-color: #ccc;
-        padding-left: 200px; 
-        text-align: center;
-    } */
-
-    #main {
-        background: #fff;
-    }
-
-
-    .side-bar-menu {
-        float: left;
-        padding: 0px 0px 0px 10px;
-        margin: 0px 0px 0px 0px;
-        background: #eee;
-    }
-
-    .main-table {
-        width: 100%;
-    }
-
-    .head-frame {
-        height: 0px; 
-        vertical-align: top; 
-        text-align: left;
-    }
-
-    .side-bar-left {
-        background: #abb;
-        border: none;
-        width: 100px;
-    }
-
-    .main {
-        background: #bab;
-    }
-
-    .side-bar-right {
-        background: #bba;
-    }
-
-    .frame {
-        height: 700px;
-        vertical-align: top; 
-        text-align: left;
-    }
-
-    .h1 {
-        font-size: 30px;
-    }
-    .h2 {
-        font-size: 20px;
-    }
-</style>
+    <style>
+            /* .header {
+                display: none;
+            } */
+    </style>
 <% end %>
 
-<body>
-<br>
-
-<table cellspacing="1" class="main-table">
-
-    <tr class="head-frame" >
-
-        <td colspan="3" class="tbhd" style="border: none">
-            <p></p>
-        </td>
-
-    </tr style="border: none">
-
-    <tr class="frame" >
-        <td class="side-bar-left" >
-        <p> frame1</p><p> side-bar</p></td>
-
-        <td class="main" style="width: 300px; border: none;"><p> frame2</p><p> 
-        main
-        <div class="box1">
-            <div class="list-group">
-                <table>
-                    <thead>
-                        <tr>
-                            <div style="color: #000; font-size: 30px;">
-                            <%# <%= @date + 'のイベント'%> 
-                            </div>
-                            <br>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% picture_new = @pictures%> 
-
-                        <% picture_new.first(3).each do |picture| %>
-                        <div style="display: block; padding-top: 50px;"> 
-                            <%= "title : " + picture.title %>
-                            <br>
-                            <%= "description : " + picture.description %>
-                        </div>
-                        <% end %>
-                    </tbody>
-                </table>
-            </div>
+<body >
+<div >
+    <aside id="side-bar-left">
+        <div id="side-bar-left-menu">
+            <ul>
+                <li class="collection"><a href="#">COLLECTION</a>
+                    <ul class="collection-list">
+                            <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 10</a></li>
+                            <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 9</a></li>
+                            <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 8</a></li>
+                            <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 7</a></li>
+                            <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 6</a></li>
+                    </ul>
+                </li>
+                <li class="_block"><a href="#" class="nav_collection">THE STORY</a>
+                    <ul class="collection-submenu"></ul>
+                </li>
+                <li class="_block"><a href="#" class="nav_collection">SHOP</a>
+                    <ul class="collection-submenu"></ul>
+                </li>
+                <li class="_block"><a href="#" class="nav_collection">CONTACT</a>
+                    <ul class="collection-submenu"></ul>
+                </li>
+                <li class="_block">
+                    <button class="sp-mode" style="display:none;">スマートフォン用で表示</button>
+                </li>
+            </ul>
         </div>
-    
-    </p></td>
-        <td class="side-bar-right" style="width: 100px; border: none;">
-            <p>frame3</p>
-        </td>
-    </tr>
+    </aside>
+</div>
 
-    <tr style="height: 50px; vertical-align: top; text-align: left;">
-        <td colspan="3" class="tbdtl1" style="border: none;">
-        <p>footer</p>
-        </td>
-    </tr>
-</table>
+<div class="main"><p> frame2</p> 
+    main
+    <div id="main_img">
+        <img src="/assets/sample.jpg">
+    </div>
+    <div class="box1">
+        <div class="list-group">
+            <table>
+                <thead>
+                    <tr>
+                        <div style="color: #000; font-size: 30px;">
+                        <%# <%= @date + 'のイベント'%> 
+                        </div>
+                        <br>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% picture_new = @pictures %> 
 
+                    <% picture_new.first(3).each do |picture| %>
+                    <div style="display: block; padding-top: 50px;"> 
+                        <%= "title : " + picture.title %>
+                        <br>
+                        <%= "description : " + picture.description %>
+                    </div>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<aside id="side-bar-right">
+        <p>frame3</p>
+</aside>
+<script>
+    (function($) {
+        $(function () {
+            $('.collection > a').on('click', function (e) {
+                e.preventDefault();
+                var $subNav = $(this).next('.collection-list');
+                if ($subNav.css("display") === "block") {
+                    $(this).addClass('is-active');
+                    $subNav.velocity('slideUp', {duration: 400});
+                } else {
+                    $(this).removeClass('is-active');
+                    $subNav.velocity('slideDown', {duration: 400});
+                }
+            });
+        });
+    })(jQuery);
+</script>
+
+<header class="header">
+    <nav class="global-nav">
+        <ul class="global-nav__list">
+            <!--front--> 
+            <label for="menuOn">
+                <li class="global-nav__item"><a class="nav_collection"　for="toggle1">COLLECTION</a>
+                    <input id="menuOn" type="checkbox">
+                    <!--back-->
+                    <menu>
+                    <ul id ="collection-list" class="collection-list">
+                        <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 10</a></li>
+                        <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 9</a></li>
+                        <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 8</a></li>
+                        <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 7</a></li>
+                        <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 6</a></li>
+                    </ul>
+                    </menu>
+                    <%# <ul class="overlay"></ul> %>
+                </li>
+            </label>
+                <li class="global-nav__item"><a href="#" class="nav_collection">THE STORY</a>
+                    <ul class="collection-submenu"></ul>
+                </li>
+                <li class="global-nav__item"><a href="#" class="nav_collection">SHOP</a>
+                    <ul class="collection-submenu"></ul>
+                </li>
+                <li class="global-nav__item"><a href="#" class="nav_collection">CONTACT</a>
+                    <ul class="collection-submenu"></ul>
+                </li>
+                <li class="global-nav__item">
+                    <button class="pc-mode" style="display:none;">PC用で表示</button>
+                </li>
+        </ul>
+    </nav>
+    <div class="hamburger" id="js-hamburger">
+        <span class="hamburger__line hamburger__line--1"></span>
+        <span class="hamburger__line hamburger__line--2"></span>
+        <span class="hamburger__line hamburger__line--3"></span>
+    </div>
+    <div class="black-bg" id="js-black-bg"></div>
+</header>
+
+<script>
+    function toggleNav() {
+    var body = document.body;
+    var hamburger = document.getElementById('js-hamburger');
+    var blackBg = document.getElementById('js-black-bg');
+
+    hamburger.addEventListener('click', function() {
+        body.classList.toggle('nav-open');
+    });
+    blackBg.addEventListener('click', function() {
+        body.classList.remove('nav-open');
+    });
+    }
+    toggleNav();
+</script>
 
 
 </body>

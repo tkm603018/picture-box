@@ -1,18 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <title>PictureBox</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= yield :head %>
+  <%# <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> 
+  <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.0.0/velocity.min.js"></script>
+  
+  <script>
+    var pc_width = 1080;
+    var device = (screen.width < 600 ? 'sp' : 'pc');
+    var view_mode = (device == 'pc' || document.cookie.indexOf('view_mode=pc') != -1 ? 'pc' : 'sp');
+    if (device == 'sp' && view_mode == 'pc') {
+        document.getElementsByName('viewport')[0].setAttribute('content', 'width=' + pc_width + ',initial-scale=1');
+    }
+
+    $(function () {
+        if (device == 'sp') {
+            if (view_mode == 'pc') {
+                $('.sp-mode').on('click', function () {
+                    var date = new Date();
+                    date.setTime(0);
+                    document.cookie = 'view_mode=;expires='+date.toGMTString();
+                    location.reload(false);
+                }).show();
+            } else {
+                $('.pc-mode').on('click', function () {
+                    document.cookie = 'view_mode=pc';
+                    location.reload(false);
+                }).show();
+            }
+        }
+    });
+  </script>
+  
+    
+ <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
+ 
+ <%= yield :head %> 
+
+  <title>PictureBox</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <link rel="stylesheet" type="text/css" href="assets/sp.css.scss" media="only screen and (max-width:450px)">
+  <link rel="stylesheet" type="text/css" href="assets/pc.css.scss"　media="(min-width: 1024px)">
+  
+
   </head>
 
   <body id="body-all">
-    <%= render 'layouts/header' %>
+    <%# <%= render 'layouts/header'  %> 
 
     <div class="container">
       <% flash.each do |message_type, message| %>
@@ -23,7 +63,7 @@
           <%= yield %>
         </div>
 
-      <%= render 'layouts/footer' %>
+      <%# <%= render 'layouts/footer' %> 
       <%= debug(params) if Rails.env.development? %>
     </div>
 

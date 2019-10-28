@@ -3,23 +3,24 @@
     height: 70px;
     overflow: hidden;
     text-align: center;
-    z-index:999;
+    z-index:50;
+    // color:#aaa;
 }
 .header_absolute {
     // display: inline-block;
-    //color: #000;
+    // color: #ddd;
     // background: #fff;
     // transition: .3s;
     // display: flex;
     // padding: 60px 20px;
 
-    background: rgb(255, 255, 255);
+    // background: rgb(255, 255, 255);
     padding: 10px;
+    z-index: 50;
     position: fixed;
     top: 0;
     transition: .6s;
     width: 100%;
-    z-index: 999;
     opacity: 1;
     
 }
