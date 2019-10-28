@@ -1,304 +1,78 @@
 <% content_for :head do %>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.0.0/velocity.min.js"></script>
     <style>
-    .container {
-        /* background: #eee; */
-        
-        width: 100%;
-        height:2000px;
-        
-        
-    }
-    .body{
-        padding: 0px;
-        margin:0px;
-        height:2000px;
-        /* background: #aac; */
-        /* font-family: 'Libre Baskerville', serif; */
-        min-width:800px;
-        
-        
-    }
-    /* .content {
-        width: 700px;
-        height: 700px;
-        padding: 50px 50px 50px 50px;
-        margin: 300px 100px 100px 100px;
-        background-color: #ccc;
-        padding-left: 200px; 
-        text-align: center;
-    } */
-
-    #main {
-        background: #fff;
-        /* height:500px; */
-        font-family: 'adobe-garamond-pro', 'Yu Mincho', '游明朝', 'YuMincho', '游明朝体', 'Hiragino Mincho ProN', 'Sawarabi Mincho', serif!important;
-        
-    }
-
-
-    /* .side-bar-menu {
-        float: left;
-        padding: 0px 0px 0px 10px;
-        margin: 0px 0px 0px 0px;
-        background: #fff;
-        color: #999;
-        
-    } */
-
-    .main-table {
-        width: 100%;
-    }
-
-    .head-frame {
-        height: 0px; 
-        vertical-align: top; 
-        text-align: left;
-    }
-
-    #side-bar-left {
-        z-index: 10s;
-        position: relative;
-        /* background: #eee; */
-        /* border: none; */
-        padding-top: 10px;
-        padding-right:0px;
-        /* outline: none; */
-        /* color: #000; */
-        letter-spacing: 0.12em!important;
-        /* vertical-align:baseline; */
-        padding-inline-start:20px;
-        line-height: 2.5em;
-        font-size: 0.7em;
-        margin-right: auto;
-        /* padding: 30px 0; */
-        width: 20%;
-        height: 400px;
-        position: fixed;
-        /* color: #033560; */
-        /* background: #fff; */
-        /* text-align: center; */
-        /* background: #aac; */
-}
-    #side-bar-left-menu {
-    }
-    
-    #side-bar-left-menu ul {
-        margin-right:40px;
-        /* padding-left: 100px; */
-        padding-left: 50px;
-    }
-    #side-bar-left-menu .collection > a {
-    color: #999;
-    text-decoration: none;
-}
-#side-bar-left-menu .collection > a:hover {
-    color: #d33;
-
-}
-    #side-bar-left-menu .collection > a:after {
-        content: "";
-        position: absolute;
-        /* display: inline-block; */
-        width: 10px;
-        height: 10px;
-        left:30;
-        margin: 4px 10px;
-        border-bottom: 2px solid #bcc;
-        border-right: 2px solid #bcc;
-        transform: rotate(45deg);
-        transition: all .2s ease-out;
-        text-decoration: none;
-}
-    #side-bar-left-menu .collection.is-active > a:after {
-        transform: rotate(-45deg);
-        
-    }
-
-    .collection {
-        overflow: hidden;
-        text-decoration: none;
-
-    }
-    ._block {
-        overflow: hidden; 
-        text-decoration: none;
-    }
-    #side-bar-left-menu ._block > a {
-        text-decoration: none;
-        color: #999;
-        overflow: hidden;
-
-    }
-    #side-bar-left-menu ._block > a:hover {
-    color: #d33;
-
-
-}
-        .collection-list {
-        display: none;
-        /* text-decoration: none; */
-        overflow: hidden;
-        margin: 0 auto;
-        width:100%;
-    }
-        .collection-list li a {
-            color: #666;
-    }
-        .collection-list li a:hover{
-            color: #d33;
-    }
-
-    .collection-list-block {
-        /* display: block; */
-        /* text-decoration: none; */
-        overflow: hidden;
-    }
-        .collection-list-block-tag {
-        margin: 0 auto;
-        width:100%;
-    }
-    #side-bar-left-menu .collection .collection-list a {
-        display: inline-block;
-        text-decoration: none;
-        color:666;
-    }
-    #side-bar-left-menu .collection .collection-list a:hover {
-        display: inline-block;
-        text-decoration: none;
-        color:000;
-    }
-
-    /* li a:hover{
-    background: #b3d7ff;
-    color: #fff;
-    } */
-
-    .main {
-        z-index: 800;
-        /* background: #999; */
-        width: 100%;
-        height: 1000px; 
-        padding-left: 50px;
-        padding-right: 50px;
-        margin: 0 auto;
-        /* position:center; */
-        text-align:center;
-        display:block;
-    }
-
-    #side-bar-right {
-        display:block;
-        position: absolute;
-        /* border: none; */
-        /* outline: none; */
-        position: fixed;
-        background: #fff;
-        /* margin: 0 ; */
-        width: 22%;
-        height: 350px;
-        /* padding-right: 200px; */
-        top: 130px;
-        right: 0px;
-        margin: 0 auto;
-        z-index: 10;
-    }
-
-    #side-bar-right p {
-        color:#999;
-    }
-
-    .frame {
-        height: 100%;
-        vertical-align: top; 
-        text-align: left;
-    }
-
-    .h1 {
-        font-size: 30px;
-    }
-    .h2 {
-        font-size: 20px;
-    }
-    .footer {
-        /* position: bottom; */
-    }
-
-#main_img img {
-    margin: 0 auto;
-    width: 50%;
-    z-index:999;
-}
-</style>
+            /* .header {
+                display: none;
+            } */
+    </style>
 <% end %>
 
-<body>
-<br>
-<div style="dysplay:block">
-        <aside id="side-bar-left" style="dysplay:block">
-            <div id="side-bar-left-menu">
-                <ul>
-                    <li class="collection"><a href="/index.html">COLLECTION</a>
-                        <ul class="collection-list">
-                                <li class="collection-list-block"><a href="/index.html" class="collection-list-block-tag">2019 10</a></li>
-                                <li class="collection-list-block"><a href="/index.html" class="collection-list-block-tag">2019 9</a></li>
-                                <li class="collection-list-block"><a href="/index.html" class="collection-list-block-tag">2019 8</a></li>
-                                <li class="collection-list-block"><a href="/index.html" class="collection-list-block-tag">2019 7</a></li>
-                                <li class="collection-list-block"><a href="/index.html" class="collection-list-block-tag">2019 6</a></li>
-                        </ul>
-                    </li>
-                    <li class="_block"><a href="/index.html" class="nav_collection">THE STORY</a>
-                        <ul class="collection-submenu"></ul>
-                    </li>
-                    <li class="_block"><a href="/index.html" class="nav_collection">SHOP</a>
-                        <ul class="collection-submenu"></ul>
-                    </li>
-                    <li class="_block"><a href="/index.html" class="nav_collection">CONTACT</a>
-                        <ul class="collection-submenu"></ul>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-
-        <div class="main" style="border: none; dysplay:block"><p> frame2</p><p> 
-        main
-        <div id="main_img">
-        <img src="https://www.mamekurogouchi.com/assets/img/2019_fall_winter_campaign/01.jpg">
+<body id="side-bar">
+<div >
+    <aside id="side-bar-left">
+        <div id="side-bar-left-menu">
+            <ul>
+                <li class="collection"><a href="#">COLLECTION</a>
+                    <ul class="collection-list">
+                            <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 10</a></li>
+                            <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 9</a></li>
+                            <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 8</a></li>
+                            <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 7</a></li>
+                            <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 6</a></li>
+                    </ul>
+                </li>
+                <li class="_block"><a href="#" class="nav_collection">THE STORY</a>
+                    <ul class="collection-submenu"></ul>
+                </li>
+                <li class="_block"><a href="#" class="nav_collection">SHOP</a>
+                    <ul class="collection-submenu"></ul>
+                </li>
+                <li class="_block"><a href="#" class="nav_collection">CONTACT</a>
+                    <ul class="collection-submenu"></ul>
+                </li>
+                <li class="_block">
+                    <button class="sp-mode" style="display:none;">スマートフォン用で表示</button>
+                </li>
+            </ul>
         </div>
-        <div class="box1">
-            <div class="list-group">
-                <table>
-                    <thead>
-                        <tr>
-                            <div style="color: #000; font-size: 30px;">
-                            <%# <%= @date + 'のイベント'%> 
-                            </div>
-                            <br>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% picture_new = @pictures%> 
-
-                        <% picture_new.first(3).each do |picture| %>
-                        <div style="display: block; padding-top: 50px;"> 
-                            <%= "title : " + picture.title %>
-                            <br>
-                            <%= "description : " + picture.description %>
-                        </div>
-                        <% end %>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <aside id="side-bar-right" style="border: none;">
-        <p>frame3</p>
     </aside>
 </div>
 
+<div class="main"><p> frame2</p><p> 
+    main
+    <div id="main_img">
+        <img src="/assets/sample.jpg">
+    </div>
+    <div class="box1">
+        <div class="list-group">
+            <table>
+                <thead>
+                    <tr>
+                        <div style="color: #000; font-size: 30px;">
+                        <%# <%= @date + 'のイベント'%> 
+                        </div>
+                        <br>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% picture_new = @pictures%> 
 
+                    <% picture_new.first(3).each do |picture| %>
+                    <div style="display: block; padding-top: 50px;"> 
+                        <%= "title : " + picture.title %>
+                        <br>
+                        <%= "description : " + picture.description %>
+                    </div>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
-<script type="text/javascript">
+<aside id="side-bar-right">
+        <p>frame3</p>
+</aside>
+<script>
     (function($) {
         $(function () {
             $('.collection > a').on('click', function (e) {
@@ -315,4 +89,64 @@
         });
     })(jQuery);
 </script>
+
+<header class="header">
+    <nav class="global-nav">
+        <ul class="global-nav__list">
+            <!--front--> 
+            <label for="menuOn">
+                <li class="global-nav__item"><a class="nav_collection"　for="toggle1">COLLECTION</a>
+                    <input id="menuOn" type="checkbox">
+                    <!--back-->
+                    <menu>
+                    <ul id ="collection-list" class="collection-list">
+                        <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 10</a></li>
+                        <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 9</a></li>
+                        <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 8</a></li>
+                        <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 7</a></li>
+                        <li class="collection-list-block"><a href="#" class="collection-list-block-tag">2019 6</a></li>
+                    </ul>
+                    </menu>
+                    <ul class="overlay"></ul>
+                </li>
+            </label>
+                <li class="global-nav__item"><a href="#" class="nav_collection">THE STORY</a>
+                    <ul class="collection-submenu"></ul>
+                </li>
+                <li class="global-nav__item"><a href="#" class="nav_collection">SHOP</a>
+                    <ul class="collection-submenu"></ul>
+                </li>
+                <li class="global-nav__item"><a href="#" class="nav_collection">CONTACT</a>
+                    <ul class="collection-submenu"></ul>
+                </li>
+                <li class="global-nav__item">
+                    <button class="pc-mode" style="display:none;">PC用で表示</button>
+                </li>
+        </ul>
+    </nav>
+    <div class="hamburger" id="js-hamburger">
+        <span class="hamburger__line hamburger__line--1"></span>
+        <span class="hamburger__line hamburger__line--2"></span>
+        <span class="hamburger__line hamburger__line--3"></span>
+    </div>
+    <div class="black-bg" id="js-black-bg"></div>
+</header>
+
+<script>
+    function toggleNav() {
+    var body = document.body;
+    var hamburger = document.getElementById('js-hamburger');
+    var blackBg = document.getElementById('js-black-bg');
+
+    hamburger.addEventListener('click', function() {
+        body.classList.toggle('nav-open');
+    });
+    blackBg.addEventListener('click', function() {
+        body.classList.remove('nav-open');
+    });
+    }
+    toggleNav();
+</script>
+
+
 </body>

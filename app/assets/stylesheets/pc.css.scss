@@ -1,0 +1,372 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box;
+  }
+
+
+/* universal */
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+//   letter-spacing: -2px;
+  margin-bottom: 30px;
+//   text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+//   letter-spacing: -1px;
+  margin-bottom: 30px;
+//   text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* footer */
+
+footer {
+  padding-top: 100%;
+  margin-bottom: 0px;
+  // padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+footer.nav {
+  border-top: 1px solid $gray-medium-light;
+}
+/* miscellaneous */
+
+.debug_dump {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+    @include box_sizing;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+    border: 1px solid #bbb;
+    width: 100%;
+    margin-bottom: 15px;
+    @include box_sizing;
+  }
+  
+  input {
+    height: auto !important;
+  }
+
+  #error_explanation {
+    color: red;
+    ul {
+      color: red;
+      margin: 0 0 30px 0;
+    }
+  }
+  
+  .field_with_errors {
+    @extend .has-error;
+    .form-control {
+      color: $state-danger-text;
+    }
+  }
+
+  .checkbox {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    span {
+      margin-left: 20px;
+      font-weight: normal;
+    }
+  }
+  
+  #session_remember_me {
+    width: auto;
+    margin-left: 0;
+  }
+
+  /* sidebar */
+
+aside {
+    section.user_info {
+      margin-top: 20px;
+    }
+    section {
+      padding: 10px 0;
+      margin-top: 20px;
+      &:first-child {
+        border: 0;
+        padding-top: 0;
+      }
+      span {
+        display: block;
+        margin-bottom: 3px;
+        line-height: 1;
+      }
+      h1 {
+        font-size: 1.4em;
+        text-align: left;
+        letter-spacing: -1px;
+        margin-bottom: 3px;
+        margin-top: 0px;
+      }
+    }
+  }
+
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .gravatar_edit {
+    margin-top: 15px;
+  }
+
+
+  // ここから /top/index.html
+///////////////////////////////////////////////////////////////////
+  .container {
+    width: 100%;
+    height:2000px;
+}
+.body{
+    padding: 0px;
+    margin:0px;
+    height:2000px；
+    // min-width: 800px;
+    // overflow: visible;
+}
+
+#main {
+    background: #fff;
+    font-family: 'adobe-garamond-pro', 'Yu Mincho', '游明朝', 'YuMincho', '游明朝体', 'Hiragino Mincho ProN', 'Sawarabi Mincho', serif!important;   
+}
+
+.main-table {
+    width: 100%;
+}
+
+.head-frame {
+    height: 0px; 
+    vertical-align: top; 
+    text-align: left;
+}
+
+#side-bar-left {
+    z-index: 900;
+    position: relative;
+    padding-top: 10px;
+    padding-right:0px;
+    letter-spacing: 0.12em!important;
+    // padding-inline-start:20px;
+    line-height: 2.5em;
+    font-size: 0.7em;
+    margin-right: auto;
+    width: 30%;
+    height: 500px;;
+    position: fixed; 
+}
+
+#side-bar-left-menu ul {
+    margin-right:40px;
+    padding-left: 50px;
+}
+#side-bar-left-menu .collection > a {
+color: #999;
+text-decoration: none;
+}
+#side-bar-left-menu .collection > a:hover {
+color: #d33;
+
+}
+#side-bar-left-menu .collection > a:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left:30;
+    margin: 4px 10px;
+    border-bottom: 2px solid #bcc;
+    border-right: 2px solid #bcc;
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+    text-decoration: none;
+}
+#side-bar-left-menu .collection.is-active > a:after {
+    transform: rotate(-45deg);
+    
+}
+
+.collection {
+    overflow: hidden;
+    text-decoration: none;
+
+}
+._block {
+    overflow: hidden; 
+    text-decoration: none;
+}
+#side-bar-left-menu ._block > a {
+    text-decoration: none;
+    color: #999;
+    overflow: hidden;
+
+}
+#side-bar-left-menu ._block > a:hover {
+color: #d33;
+
+
+}
+    .collection-list {
+    display: none;
+    overflow: hidden;
+    margin: 0 auto;
+    width:100%;
+}
+    .collection-list li a {
+        color: #666;
+}
+    .collection-list li a:hover{
+        color: #d33;
+}
+
+.collection-list-block {
+    overflow: hidden;
+}
+    .collection-list-block-tag {
+    margin: 0 auto;
+    width:100%;
+}
+#side-bar-left-menu .collection .collection-list a {
+    display: inline-block;
+    text-decoration: none;
+    color:666;
+}
+#side-bar-left-menu .collection .collection-list a:hover {
+    display: inline-block;
+    text-decoration: none;
+    color:000;
+}
+
+.main {
+    z-index: 800;
+    width: 100%;
+    height: 1000px; 
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0 auto;
+    text-align:center;
+    display:block;
+}
+
+#side-bar-right {
+    display:none;
+    position: absolute;
+    // position: fixed;
+    background: #fff;
+    width: 22%;
+    height: 350px;
+    top: 130px;
+    right: 0px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+#side-bar-right p {
+    color:#999;
+}
+
+.frame {
+    height: 100%;
+    vertical-align: top; 
+    text-align: left;
+}
+
+.h1 {
+    font-size: 30px;
+}
+.h2 {
+    font-size: 20px;
+}
+
+#main_img img {
+margin: 0 auto;
+width: 50%;
+z-index:999;
+}
+
