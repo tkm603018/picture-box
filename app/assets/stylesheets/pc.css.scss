@@ -214,7 +214,7 @@ aside {
 
 #main {
     background: #fff;
-    font-family: 'adobe-garamond-pro', 'Yu Mincho', '游明朝', 'YuMincho', '游明朝体', 'Hiragino Mincho ProN', 'Sawarabi Mincho', serif!important;   
+    font-family: 'adobe-garamond-pro', 'Yu Mincho', '游明朝', 'YuMincho', '游明朝体', 'Hiragino Mincho ProN', 'Sawarabi Mincho', serif!important;
 }
 
 .main-table {
@@ -293,23 +293,23 @@ color: #d33;
 
 
 }
-    .collection-list {
+   .collection .collection-list {
     display: none;
     overflow: hidden;
     margin: 0 auto;
     width:100%;
 }
-    .collection-list li a {
+   .collection .collection-list li a {
         color: #666;
 }
-    .collection-list li a:hover{
+   .collection .collection-list li a:hover{
         color: #d33;
 }
 
-.collection-list-block {
+.collection .collection-list-block {
     overflow: hidden;
 }
-    .collection-list-block-tag {
+   .collection .collection-list-block-tag {
     margin: 0 auto;
     width:100%;
 }
@@ -371,7 +371,5 @@ width: 50%;
 z-index:999;
 }
 
-// .header {
-//   display:none;
-// }
+
 
