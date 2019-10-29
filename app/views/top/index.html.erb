@@ -37,7 +37,8 @@
     </aside>
 </div>
 
-<div class="main"><p> frame2</p> 
+<div class="main">
+ <p> frame2</p> 
     main
     <div id="main_img">
         <img src="/assets/sample.jpg">
@@ -53,11 +54,10 @@
                         <br>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbody-frame">
                     <% picture_new = @pictures %> 
-
-                    <% picture_new.first(3).each do |picture| %>
-                    <div style="display: block; padding-top: 50px;"> 
+                    <% picture_new.first(1).each do |picture| %>
+                    <div> 
                         <%= "title : " + picture.title %>
                         <br>
                         <%= "description : " + picture.description %>
