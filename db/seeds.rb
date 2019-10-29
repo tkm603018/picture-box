@@ -8,8 +8,10 @@
 
 10.times.each do |a|
     picture = {
-        title: "Test #{a}",
-        description: "There is apple"
+        title: "////// #{a}",
+        description: "Makersleeve is the first sleeve for smart devices that can be made on demand, anywhere in the world, by anyone. Designed following the belief that no products should be mass produced, but created specifically for each customer in exactly the way you need it.
+
+        Unlike your average laptop sleeve, a Makersleeve is only made after it is sold. Due to it’s clever design, it can be made in a matter of minutes anywhere in the world using nothing but fabric and a laser cutter. The digital design automatically transforms to perfectly fit your device."
     }
     Picture.create!(picture)
 end
