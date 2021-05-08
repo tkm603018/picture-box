@@ -14,7 +14,7 @@ NULLCMD = :
 srcdir = .
 topdir = /Users/tkm/.rbenv/versions/2.6.3/include/ruby-2.6.0
 hdrdir = $(topdir)
-arch_hdrdir = /Users/tkm/.rbenv/versions/2.6.3/include/ruby-2.6.0/x86_64-darwin18
+arch_hdrdir = /Users/tkm/.rbenv/versions/2.6.3/include/ruby-2.6.0/x86_64-darwin19
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
 prefix = $(DESTDIR)/Users/tkm/.rbenv/versions/2.6.3
@@ -31,8 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20190930-89311-3cx3sf
-sitelibdir = $(DESTDIR)./.gem.20190930-89311-3cx3sf
+sitearchdir = $(DESTDIR)./.gem.20210508-72004-17at949
+sitelibdir = $(DESTDIR)./.gem.20210508-72004-17at949
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -83,12 +83,12 @@ debugflags = -ggdb3
 warnflags = -Wall -Wextra -Wdeclaration-after-statement -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens
 cppflags = 
 CCDLFLAGS = -fno-common
-CFLAGS   = $(CCDLFLAGS)  -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/usr/local/Cellar/imagemagick@6/6.9.10-66/include/ImageMagick-6 -std=gnu99 $(ARCH_FLAG)
+CFLAGS   = $(CCDLFLAGS)  -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/usr/local/Cellar/imagemagick@6/6.9.11-25/include/ImageMagick-6 -std=gnu99 $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\"  -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/usr/local/Cellar/imagemagick@6/6.9.10-66/include/ImageMagick-6
+CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\"  -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/usr/local/Cellar/imagemagick@6/6.9.11-25/include/ImageMagick-6
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
-ldflags  =  -L/usr/local/Cellar/imagemagick@6/6.9.10-66/lib -lMagickCore-6.Q16
+ldflags  =  -L/usr/local/Cellar/imagemagick@6/6.9.11-25/lib -lMagickCore-6.Q16
 dldflags = -L/Users/tkm/.rbenv/versions/2.6.3/lib  -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
@@ -104,7 +104,7 @@ RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
 RUBYW_BASE_NAME = rubyw
 RUBY_BASE_NAME = ruby
 
-arch = x86_64-darwin18
+arch = x86_64-darwin19
 sitearch = $(arch)
 ruby_version = 2.6.0
 ruby = $(bindir)/$(RUBY_BASE_NAME)
@@ -135,7 +135,7 @@ DISTCLEANDIRS =
 extout = 
 extout_prefix = 
 target_prefix = 
-LOCAL_LIBS =  -L/usr/local/Cellar/imagemagick@6/6.9.10-66/lib -lMagickCore-6.Q16
+LOCAL_LIBS =  -L/usr/local/Cellar/imagemagick@6/6.9.11-25/lib -lMagickCore-6.Q16
 LIBS =    
 ORIG_SRCS = rmagick.c rmdraw.c rmenum.c rmfill.c rmilist.c rmimage.c rminfo.c rmkinfo.c rmmain.c rmmontage.c rmpixel.c rmstruct.c rmutil.c
 SRCS = $(ORIG_SRCS) 
